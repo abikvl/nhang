@@ -38,7 +38,6 @@ if (isMainThread) {
     function _onHang() {
         if (!onHang) {
             console.error('Main thread hang detected! Terminating process.');
-            console.trace();
             process.kill(process.pid);
         } else {
             onHang();
