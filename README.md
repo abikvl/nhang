@@ -3,7 +3,7 @@ This is a simple package to detect hangs in Node.js applications caused by infin
 
 ### Installation
 
-`$ npm install marked`
+`$ npm install nhang`
 
 ### Usage
 
