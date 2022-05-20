@@ -1,0 +1,27 @@
+{
+  "name": "nhang",
+  "version": "0.0.1",
+  "description": "Hang detector for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abikvl/nhang.git"
+  },
+  "keywords": [
+    "node",
+    "hang",
+    "detect"
+  ],
+  "author": "InteliWeb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abikvl/nhang/issues"
+  },
+  "homepage": "https://github.com/abikvl/nhang#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}
