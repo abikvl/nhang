@@ -7,6 +7,7 @@ const {
 
 if (isMainThread) {
     let worker;
+    let timer;
     module.exports = {
         watch: function watchHang({ checkInterval, pingInterval, script }) {
             if (worker) {
@@ -18,12 +19,15 @@ if (isMainThread) {
             worker = new Worker(__filename, {
                 workerData: { checkInterval, script }
             });
-            setInterval(() => {
+            timer = setInterval(() => {
                 worker.postMessage('ping');
             }, pingInterval);
             return worker;
         },
         unwatch: function () {
+            if (timer) {
+                clearInterval(timer);
+            }
             if (worker) {
                 worker.terminate();
             }
